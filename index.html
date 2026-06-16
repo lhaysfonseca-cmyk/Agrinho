@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo EcoFazenda - Agro Sustentável</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>🚜 EcoFazenda: O Desafio Sustentável</h1>
+        <p class="description">Tome as decisões certas para equilibrar a sua produção e a saúde do meio ambiente!</p>
+
+        <div class="status-container">
+            <div class="status-bar">
+                <span>🚜 Produção: <strong id="prod-value">50%</strong></span>
+                <div class="progress"><div id="bar-prod" class="fill prod" style="width: 50%;"></div></div>
+            </div>
+            <div class="status-bar">
+                <span>🌳 Meio Ambiente: <strong id="env-value">50%</strong></span>
+                <div class="progress"><div id="bar-env" class="fill env" style="width: 50%;"></div></div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div id="quiz-box">
+            <p id="question">Carregando desafio...</p>
+            <div class="options-container">
+                <button class="btn-option" onclick="chooseOption(1)" id="opt1">Opção 1</button>
+                <button class="btn-option" onclick="chooseOption(2)" id="opt2">Opção 2</button>
+            </div>
+        </div>
+
+        <div id="game-over-box" style="display: none;">
+            <h2 id="game-over-title">Fim de Jogo!</h2>
+            <p id="game-over-text"></p>
+            <button class="btn-restart" onclick="restartGame()">Jogar Novamente</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
